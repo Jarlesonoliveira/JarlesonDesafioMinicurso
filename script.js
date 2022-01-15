@@ -10,15 +10,20 @@ gerarValorAleatorio = () => {
 
 pegarPersonagem = () => {
     let numeroAleatorio = gerarValorAleatorio();
-    return fetch(`https://rickandmorty.com/api/character/${numeroAleatorio}`)
+    return fetch(`https://rickandmorty.com/api/character/${numeroAleatorio}`, {
+        method:'GET',
+        headers: {
+            Accept: 'application/json',
+            "content-type": 'application/json'
+        }
+    }).then((response) => response.json()).then((data) => {
+        imagem.src = data.image;
+        imagem.alt = data.name;
+        nomeDoPersonagem.innerHTML = data.species;
+        condicao.innerHTML = data.status;
+
+    }) 
 }
 
-traduzirCondicao = (data) => {
-    if(data.status == 'unknown'){
-        return 'Não sabemos';
-    }else if(data.status == 'Alive'){
-        return 'Sim';
-    }else {
-        return 'Não. Está morto';
-    }
-}
+botao.onclick = pegarPersonagem;
+
