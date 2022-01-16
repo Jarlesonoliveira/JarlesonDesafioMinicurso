@@ -8,7 +8,7 @@ body {
         #00CED1 95%
     );
     margin: 0;
-    min-height: 100vh;
+    min-height: 400vh;
     width: 100%;
 }
 
@@ -24,6 +24,7 @@ main {
     height: 300px;
     margin: 15px 0;
     width: 300px; 
+    padding: 20px;
        
 }
 
@@ -31,6 +32,8 @@ main {
     height: 300px;
     margin: 15px 0;
     width: 300px;
+    padding: 20px;
+    
     
 }
 
@@ -38,28 +41,30 @@ main {
     height: 300px;
     margin: 15px 0;
     width: 300px;
-    
+    padding: 20px;
+        
 }
 
 main > section button {
     background-color: #ff0000;
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
     color: white;
-    font-family: EuclidBold;
-    font-size: 12px;
-    font-weight: 500;
-    letter-spacing: -0.6px;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 3.6px;
     line-height: 15px;
-    padding: 9px 23px;
-    text-transform: uppercase;
+    padding: 9px 10px;
+    text-transform: uppercase; 
+       
 }
 
 #detalhes-container1 {
     font-weight: bold;
     list-style-type: none;
     width: 90%;
-    object-fit: cover;
+    height: 150px;
 }
 
 #detalhes-container1 > li {
@@ -78,6 +83,8 @@ main > section button {
     font-weight: bold;
     list-style-type: none;
     width: 90%;
+    height: 120px;
+    
 }
 
 #detalhes-container2 > li {
@@ -95,6 +102,7 @@ main > section button {
     font-weight: bold;
     list-style-type: none;
     width: 90%;
+    height: 150px;
 }
 
 #detalhes-container3 > li {
