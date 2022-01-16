@@ -6,6 +6,10 @@ const imagemB = document.querySelector('#imagem2');
 const nomeDoPersonagemB = document.querySelector('#nomeB');
 const especieB = document.querySelector('#especieB');
 const condicaoB = document.querySelector('#statusB');
+const imagemC = document.querySelector('#imagem3');
+const nomeDoPersonagemC = document.querySelector('#nomeC');
+const especieC = document.querySelector('#especieC');
+const condicaoC = document.querySelector('#statusC');
 const botao = document.querySelector('button');
 
 
@@ -44,6 +48,22 @@ pegarPersonagem = () => {
         nomeDoPersonagemB.innerHTML = data.name;
         especieB.innerHTML = data.species;
         condicaoB.innerHTML = data.status;
+    });
+
+    let numeroAleatorio3 = gerarValorAleatorio();
+    fetch(`https://rickandmortyapi.com/api/character/${numeroAleatorio3}`, {
+        method:'GET',
+        headers: {
+            Accept: 'application/json',
+            "content-type": 'application/json'
+        }
+
+    }).then((response) => response.json()).then((data) => {
+        imagemC.src = data.image;
+        imagemC.alt = data.name;
+        nomeDoPersonagemC.innerHTML = data.name;
+        especieC.innerHTML = data.species;
+        condicaoC.innerHTML = data.status;
     });
 
 }

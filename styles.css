@@ -34,6 +34,13 @@ main {
     
 }
 
+#imagem3 {
+    height: 300px;
+    margin: 15px 0;
+    width: 300px;
+    
+}
+
 main > section button {
     background-color: #ff0000;
     border: none;
@@ -80,6 +87,23 @@ main > section button {
 
 
 #detalhes-container2 > li p {
+    color: white;
+
+}
+
+#detalhes-container3 {
+    font-weight: bold;
+    list-style-type: none;
+    width: 90%;
+}
+
+#detalhes-container3 > li {
+    align-items: baseline;
+    display: flex;
+}
+
+
+#detalhes-container3 > li p {
     color: white;
 
 }
